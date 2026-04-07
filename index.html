@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
+
     <title>Autoservice Simmern | Performance & Repair</title>
     <meta name="description" content="Autoservice Simmern: Ihr Meisterbetrieb im Hunsrück für High Performance, Inspektionen, Reifenwechsel und TÜV. Jetzt Termin vereinbaren!">
     <meta name="theme-color" content="#050505">
 
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1486262715619-72a9bf7ea053?q=80&w=1920&auto=format&fit=crop">
-    <link rel="preload" href="/assets/fonts/BarlowCondensed-BlackItalic.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="/assets/fonts/Rajdhani-Regular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="/assets/fonts/Rajdhani-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;1,400;1,700;1,900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+
 
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -35,102 +38,66 @@
                         }
                     },
                     backgroundImage: {
-                        'carbon-pattern': "url('https://www.transparenttextures.com/patterns/carbon-fibre.png')"
-                    }
-                }
+
+	@@ -29,75 +40,61 @@
             }
         }
     </script>
-    
+
+
+
+
+
+
     <style>
-        /* 3. LOKALE SCHRIFTARTEN MIT FONT-DISPLAY: SWAP */
-        @font-face {
-            font-family: 'Barlow Condensed';
-            src: url('/assets/fonts/BarlowCondensed-BlackItalic.ttf') format('truetype');
-            font-weight: 400;
-            font-style: normal;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Barlow Condensed';
-            src: url('/assets/fonts/BarlowCondensed-BlackItalic.ttf') format('truetype');
-            font-weight: 700;
-            font-style: normal;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Barlow Condensed';
-            src: url('/assets/fonts/BarlowCondensed-BlackItalic.ttf') format('truetype');
-            font-weight: 400;
-            font-style: italic;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Barlow Condensed';
-            src: url('/assets/fonts/BarlowCondensed-BlackItalic.ttf') format('truetype');
-            font-weight: 700;
-            font-style: italic;
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'Rajdhani';
-            src: url('/assets/fonts/Rajdhani-Regular.ttf') format('truetype');
-            font-weight: 400;
-            font-style: normal;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Rajdhani';
-            src: url('/assets/fonts/Rajdhani-SemiBold.ttf') format('truetype');
-            font-weight: 600;
-            font-style: normal;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Rajdhani';
-            src: url('/assets/fonts/Rajdhani-SemiBold.ttf') format('truetype');
-            font-weight: 700;
-            font-style: normal;
-            font-display: swap;
-        }
-
         body {
             font-family: 'Rajdhani', sans-serif;
             background-color: #050505;
         }
 
+
+
         #bg-image {
             position: fixed;
             inset: 0;
+
             background-image: url('https://images.unsplash.com/photo-1486262715619-72a9bf7ea053?q=80&w=1920&auto=format&fit=crop'); 
             background-size: cover;
             background-position: center;
             z-index: -3;
+
             filter: brightness(0.15) saturate(0) contrast(1.2); 
             will-change: transform; /* GPU Beschleunigung für Fixed BGs */
         }
+
+
 
         .bg-pattern {
             position: fixed;
             inset: 0;
             z-index: -2;
             opacity: 0.15;
+
             background-image: radial-gradient(#888 1px, transparent 1px);
             background-size: 30px 30px;
             pointer-events: none;
         }
 
+
+
         .bg-gradient-glow {
             position: fixed;
             inset: 0;
             z-index: -1;
+
             background: 
                 radial-gradient(circle at 90% 90%, rgba(200, 0, 0, 0.3) 0%, transparent 60%),
                 radial-gradient(circle at 10% 10%, rgba(50, 0, 0, 0.4) 0%, transparent 50%),
                 linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(10,10,10,0.6) 50%, rgba(0,0,0,0.9) 100%);
             pointer-events: none;
         }
+
+
 
         .service-card {
             background-color: rgba(255, 255, 255, 0.95);
@@ -139,8 +106,11 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
             color: #111;
+
             clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
         }
+
+
 
         .dark .service-card {
             background-color: rgba(15, 15, 15, 0.85); 
@@ -148,25 +118,23 @@
             border-left: 4px solid #ff1a1a;
             color: #e5e5e5;
             box-shadow: 0 0 20px rgba(255, 26, 26, 0.05), inset 0 0 40px rgba(0, 0, 0, 0.8);
+
             backdrop-filter: blur(12px);
         }
 
-        .dark .service-card:hover {
-            border-color: #ff1a1a;
-            box-shadow: 0 0 40px rgba(255, 26, 26, 0.2);
-            transform: translateY(-2px);
+
+
+	@@ -108,7 +105,6 @@
             background-color: rgba(20, 20, 20, 0.9);
         }
+
+
 
         .text-glow {
             text-shadow: 0 0 15px rgba(255, 26, 26, 0.8);
         }
 
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 50;
+	@@ -121,7 +117,7 @@
             background: rgba(0, 0, 0, 0.6);
             border: 1px solid #ff1a1a;
             color: #ff1a1a;
@@ -174,65 +142,75 @@
             padding: 10px;
             cursor: pointer;
             transition: all 0.3s;
-            clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
-        }
-        .theme-toggle:hover {
-            background: #ff1a1a;
-            color: #000;
+
+	@@ -133,11 +129,14 @@
             box-shadow: 0 0 15px #ff1a1a;
         }
+
+
 
         .accordion-content {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            visibility: hidden; /* A11y: Versteckt Inhalt für Screenreader wenn zu */
+            visibility: hidden; /* A11y */
         }
         .accordion-content.open {
             visibility: visible;
         }
         .accordion-btn.active .icon-chevron {
             transform: rotate(180deg);
-            color: #ff1a1a;
-        }
-        .accordion-btn.active {
-            background: rgba(255, 26, 26, 0.08);
+
+	@@ -148,7 +147,6 @@
             border-left: 2px solid #ff1a1a;
         }
+
+
 
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #111; }
         ::-webkit-scrollbar-thumb { background: #ff1a1a; border-radius: 0; }
-        ::-webkit-scrollbar-thumb:hover { background: #cc0000; }
-    </style>
+
+	@@ -157,23 +155,19 @@
 </head>
 <body class="py-12 px-4 min-h-screen text-gray-800 dark:text-gray-200 2xl:text-xl">
-    
+
+
     <div id="bg-image" aria-hidden="true"></div>
     <div class="bg-pattern" aria-hidden="true"></div>
     <div class="bg-gradient-glow" aria-hidden="true"></div>
+
+
 
     <button onclick="toggleDarkMode()" class="theme-toggle uppercase font-bold text-xs tracking-widest" aria-label="Erscheinungsbild wechseln">
         <span class="dark:hidden">Dark</span>
         <span class="hidden dark:inline">Light</span> Mode
     </button>
 
+
     <main class="w-full max-w-md 2xl:max-w-3xl mx-auto space-y-6 2xl:space-y-10">
+
+
 
         <header class="service-card p-8 text-center relative overflow-hidden group">
             <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#ff1a1a 1px, transparent 1px); background-size: 20px 20px;" aria-hidden="true"></div>
 
+
+
+
             <div class="relative z-10">
                 <div class="inline-block relative mb-4">
-                    <h1 class="text-5xl sm:text-7xl 2xl:text-8xl font-header font-bold text-black dark:text-white tracking-tighter uppercase italic transform -skew-x-6">
-                        AUTO<span class="text-brand-red text-glow">SERVICE</span>
-                    </h1>
+
+	@@ -183,14 +177,12 @@ <h1 class="text-5xl sm:text-7xl 2xl:text-8xl font-header font-bold text-black da
                     <div class="text-xl sm:text-2xl font-tech tracking-[0.5em] text-gray-500 dark:text-gray-400 mt-2 uppercase">
                         Simmern
                     </div>
                     <div class="h-1 w-24 bg-brand-red mx-auto mt-4 transform -skew-x-12 shadow-[0_0_10px_#ff1a1a]" aria-hidden="true"></div>
+
+
                 </div>
-                
+
+
                 <div class="flex justify-center mb-6 mt-4">
                     <div class="inline-flex items-center px-4 py-1 bg-gray-100 dark:bg-brand-red/10 border border-gray-300 dark:border-brand-red/50 transition-colors skew-x-[-10deg]">
                         <span class="w-2 h-2 bg-red-600 dark:bg-red-500 rounded-full mr-3 animate-pulse shadow-[0_0_8px_#ff0000]" aria-hidden="true"></span>
@@ -240,49 +218,45 @@
                     </div>
                 </div>
 
-                <p class="text-gray-600 dark:text-gray-400 text-sm 2xl:text-lg font-tech">
-                    Meisterbetrieb im Hunsrück.<br>
-                    <span class="text-brand-red">High Performance.</span> Fairer Preis.
-                </p>
+	@@ -202,10 +194,9 @@ <h1 class="text-5xl sm:text-7xl 2xl:text-8xl font-header font-bold text-black da
             </div>
         </header>
+
+
 
         <section class="service-card p-6">
             <h2 class="text-center font-header font-bold text-2xl sm:text-3xl 2xl:text-4xl text-black dark:text-white mb-6 flex items-center justify-center gap-3 uppercase italic">
                 <i class="fa-solid fa-stopwatch text-brand-red" aria-hidden="true"></i> Öffnungszeiten
             </h2>
-            
+
+
             <div class="space-y-3 text-sm sm:text-base 2xl:text-xl mb-6 font-tech">
-                <div class="flex justify-between border-b border-dashed border-gray-300 dark:border-gray-700 pb-2">
-                    <span class="opacity-70 uppercase tracking-wide">Mo - Fr</span>
-                    <span class="font-bold text-brand-red">08:00 - 18:00</span>
-                </div>
-                <div class="flex justify-between border-b border-dashed border-gray-300 dark:border-gray-700 pb-2">
-                    <span class="opacity-70 uppercase tracking-wide">Samstag</span>
-                    <span class="font-bold text-brand-red">09:00 - 14:00</span>
-                </div>
-                <div class="flex justify-between border-b border-dashed border-gray-300 dark:border-gray-700 pb-2">
-                    <span class="opacity-70 uppercase tracking-wide">Sonntag</span>
-                    <span class="font-bold text-gray-500">Geschlossen</span>
-                </div>
-            </div>
+
+	@@ -225,33 +216,29 @@ <h2 class="text-center font-header font-bold text-2xl sm:text-3xl 2xl:text-4xl t
+
 
             <div class="grid grid-cols-1 gap-4">
                 <a href="tel:0123456789" class="group relative w-full py-4 bg-brand-red hover:bg-red-600 text-white font-bold uppercase tracking-wider overflow-hidden clip-path-polygon transition-all duration-200 flex items-center justify-center gap-3 shadow-[0_0_15px_rgba(255,0,0,0.4)]">
                     <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" aria-hidden="true"></div>
                     <i class="fa-solid fa-phone transform group-hover:rotate-12 transition-transform" aria-hidden="true"></i>
+
                     <span>Termin vereinbaren</span>
                 </a>
             </div>
         </section>
+
+
 
         <section id="services" class="service-card p-4 sm:p-6">
             <h2 class="text-center font-header font-bold text-2xl sm:text-3xl 2xl:text-4xl text-black dark:text-white mb-2 flex items-center justify-center gap-3 uppercase italic">
                 <i class="fa-solid fa-wrench text-brand-red" aria-hidden="true"></i> Leistungen
             </h2>
             <p class="text-center text-xs 2xl:text-sm opacity-60 mb-6 font-tech uppercase tracking-widest">Wähle deinen Service</p>
-            
+
+
             <div class="space-y-3">
+
+
                 <div class="border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-black/40">
                     <button aria-expanded="false" aria-controls="panel-inspektion" class="accordion-btn w-full px-4 py-4 flex justify-between items-center text-left hover:bg-gray-200 dark:hover:bg-white/5 transition duration-300 group">
                         <div class="flex items-center gap-3">
@@ -295,19 +269,12 @@
                         <div class="p-4 space-y-4 text-sm 2xl:text-lg border-t border-gray-700">
                             <div class="flex justify-between items-center border-b border-gray-700/50 pb-2">
                                 <div><strong class="text-brand-red">Große Inspektion</strong><br><span class="text-xs opacity-60">Nach Herstellervorgaben inkl. Mobilitätsgarantie</span></div>
-                                <span class="font-mono text-brand-red">ab 149 €</span>
-                            </div>
-                            <div class="flex justify-between items-center border-b border-gray-700/50 pb-2">
-                                <div><strong class="text-brand-red">Ölwechsel Service</strong><br><span class="text-xs opacity-60">Premium Longlife Öl & Markenfilter</span></div>
-                                <span class="font-mono text-brand-red">ab 89 €</span>
-                            </div>
-                            <div class="flex justify-between items-center pb-2">
-                                <div><strong class="text-brand-red">Klimaservice</strong><br><span class="text-xs opacity-60">Dichtheitsprüfung & Befüllung</span></div>
-                                <span class="font-mono text-brand-red">69 €</span>
-                            </div>
-                        </div>
+
+	@@ -269,16 +256,15 @@ <h2 class="text-center font-header font-bold text-2xl sm:text-3xl 2xl:text-4xl t
                     </div>
                 </div>
+
+
 
                 <div class="border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-black/40">
                     <button aria-expanded="false" aria-controls="panel-reifen" class="accordion-btn w-full px-4 py-4 flex justify-between items-center text-left hover:bg-gray-200 dark:hover:bg-white/5 transition duration-300 group">
@@ -321,23 +288,12 @@
                         <div class="p-4 space-y-4 text-sm 2xl:text-lg border-t border-gray-700">
                             <div class="flex justify-between items-center border-b border-gray-700/50 pb-2">
                                 <div><strong>Radwechsel (bis 18 Zoll)</strong><br><span class="text-xs opacity-60">Pro Satz (4 Räder) inkl. Wuchten</span></div>
-                                <span class="font-mono text-brand-red">25 €</span>
-                            </div>
-                             <div class="flex justify-between items-center border-b border-gray-700/50 pb-2">
-                                <div><strong>Radwechsel (ab 19 Zoll)</strong><br><span class="text-xs opacity-60">Pro Satz (4 Räder) inkl. Wuchten</span></div>
-                                <span class="font-mono text-brand-red">35 €</span>
-                            </div>
-                            <div class="flex justify-between items-center border-b border-gray-700/50 pb-2">
-                                <div><strong>Reifenmontage</strong><br><span class="text-xs opacity-60">Aufziehen neuer Reifen & Altreifenentsorgung</span></div>
-                                <span class="font-mono text-brand-red">ab 15 €/Stk</span>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div><strong>Achsvermessung</strong><br><span class="text-xs opacity-60">3D Laser-Vermessung</span></div>
-                                <span class="font-mono text-brand-red">79 €</span>
-                            </div>
-                        </div>
+
+	@@ -300,16 +286,15 @@ <h2 class="text-center font-header font-bold text-2xl sm:text-3xl 2xl:text-4xl t
                     </div>
                 </div>
+
+
 
                  <div class="border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-black/40">
                     <button aria-expanded="false" aria-controls="panel-tuning" class="accordion-btn w-full px-4 py-4 flex justify-between items-center text-left hover:bg-gray-200 dark:hover:bg-white/5 transition duration-300 group">
@@ -351,27 +307,23 @@
                         <div class="p-4 space-y-4 text-sm 2xl:text-lg border-t border-gray-700">
                             <div class="flex justify-between items-center border-b border-gray-700/50 pb-2">
                                 <div><strong>Hauptuntersuchung (HU/AU)</strong><br><span class="text-xs opacity-60">Jeden Dienstag & Donnerstag im Haus</span></div>
-                                <span class="font-mono text-brand-red">145 €</span>
-                            </div>
-                            <div class="flex justify-between items-center border-b border-gray-700/50 pb-2">
-                                <div><strong>Fahrzeugaufbereitung</strong><br><span class="text-xs opacity-60">Innen & Außen, Politur, Versiegelung</span></div>
-                                <span class="font-mono text-brand-red">ab 199 €</span>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div><strong>Fehlerspeicher Diagnose</strong><br><span class="text-xs opacity-60">Auslesen & Löschen</span></div>
-                                <span class="font-mono text-brand-red">25 €</span>
-                            </div>
+
+	@@ -326,68 +311,63 @@ <h2 class="text-center font-header font-bold text-2xl sm:text-3xl 2xl:text-4xl t
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
+
+
 
         <section class="service-card p-6">
             <h2 class="text-center font-header font-bold text-2xl sm:text-3xl 2xl:text-4xl mb-6 flex items-center justify-center gap-3 uppercase italic">
                 <i class="fa-solid fa-camera text-brand-red" aria-hidden="true"></i> Werkstatt
             </h2>
-            
+
+
             <div class="grid grid-cols-2 gap-2">
                 <div class="h-32 bg-gray-200 dark:bg-gray-800 flex items-center justify-center border border-gray-700 relative overflow-hidden group">
                     <img src="https://placehold.co/400x300/111111/ff1a1a?text=Foto+Platzhalter" width="400" height="300" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0" alt="Hebebühne in der Autowerkstatt">
@@ -388,24 +340,30 @@
             </div>
         </section>
 
+
+
         <section class="service-card p-6 pb-8">
             <h2 class="text-center font-header font-bold text-2xl sm:text-3xl 2xl:text-4xl mb-6 flex items-center justify-center gap-3 uppercase italic">
                 <i class="fa-solid fa-location-dot text-brand-red" aria-hidden="true"></i> Anfahrt
             </h2>
-            
+
+
             <address class="text-center mb-6 font-medium 2xl:text-lg font-tech text-gray-500 dark:text-gray-400 not-italic">
                 Hauptstraße 12<br>
                 55469 Simmern / Hunsrück
             </address>
 
+
             <a href="https://maps.google.com/?q=Simmern+Hunsrück" target="_blank" rel="noopener noreferrer" aria-label="Route nach Simmern auf Google Maps starten" class="block w-full h-40 2xl:h-56 bg-gray-900 rounded-sm relative overflow-hidden group border border-gray-700 transition-all hover:border-brand-red">
                 <img src="https://maps.googleapis.com/maps/api/staticmap?center=Simmern&zoom=14&size=800x400&sensor=false&maptype=roadmap&style=feature:all|element:all|saturation:-100|lightness:-50&key=" width="800" height="400" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/800x400/111111/333333?text=KARTE+LADEN'" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity" alt="Karte mit Standort Simmern">
                 <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+
                     <span class="bg-brand-red text-white px-6 py-2 font-bold shadow-[0_0_20px_rgba(255,0,0,0.5)] uppercase tracking-wider transform skew-x-[-10deg] group-hover:scale-110 transition-transform flex items-center">
                         <i class="fa-solid fa-location-arrow mr-2" aria-hidden="true"></i> Route starten
                     </span>
                 </div>
             </a>
+
 
             <div class="mt-8 flex justify-center gap-8">
                 <a href="#" aria-label="Instagram Profil" class="text-3xl 2xl:text-4xl text-gray-600 dark:text-gray-500 hover:text-brand-red transition-colors"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
@@ -413,36 +371,36 @@
                 <a href="#" aria-label="WhatsApp Kontakt" class="text-3xl 2xl:text-4xl text-gray-600 dark:text-gray-500 hover:text-green-500 transition-colors"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
             </div>
 
+
             <footer class="text-center text-xs opacity-30 mt-8 font-light uppercase tracking-widest">
                 © 2026 Autoservice Simmern
             </footer>
         </section>
 
+
     </main>
 
+
     <script>
+
         if (localStorage.theme === 'light') {
             document.documentElement.classList.remove('dark')
         } else {
-            document.documentElement.classList.add('dark')
-        }
 
-        function toggleDarkMode() {
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                localStorage.theme = 'light';
-            } else {
-                document.documentElement.classList.add('dark');
-                localStorage.theme = 'dark';
+	@@ -404,31 +384,36 @@ <h2 class="text-center font-header font-bold text-2xl sm:text-3xl 2xl:text-4xl m
             }
         }
 
+
+
         const accordions = document.querySelectorAll('.accordion-btn');
+
 
         accordions.forEach(acc => {
             acc.addEventListener('click', function() {
                 const isExpanded = this.getAttribute('aria-expanded') === 'true';
-                
+
+
                 // Close others
                 accordions.forEach(otherAcc => {
                     if (otherAcc !== this) {
@@ -450,16 +408,19 @@
                         otherAcc.setAttribute('aria-expanded', 'false');
                         otherAcc.nextElementSibling.classList.remove('open');
                         otherAcc.nextElementSibling.style.maxHeight = null;
+
                         const icon = otherAcc.querySelector('.icon-chevron');
                         if(icon) icon.style.transform = 'rotate(0deg)';
                     }
                 });
+
 
                 // Toggle current
                 this.classList.toggle('active');
                 this.setAttribute('aria-expanded', !isExpanded);
                 const panel = this.nextElementSibling;
                 const icon = this.querySelector('.icon-chevron');
+
 
                 if (panel.style.maxHeight) {
                     panel.style.maxHeight = null;
